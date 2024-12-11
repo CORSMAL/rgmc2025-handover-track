@@ -1,0 +1,570 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="EN" lang="EN" dir="ltr">
+<head profile="http://gmpg.org/xfn/11"> 
+	<link rel="shortcut icon" href="images/favicon.ico" /> 
+	
+	<!-- Global site tag (gtag.js) - Google Analytics --> 
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134177032-1"></script>
+	<script> window.dataLayer = window.dataLayer  || []; 
+	function gtag(){dataLayer.push(arguments);} 
+	gtag('js', new Date()); 
+
+gtag('config', 'UA-134177032-1'); </script>
+
+<title>
+	CORSMAL | Human-to-Robot Handovers track | 10th Robotics Grasping and Manipulation Competition | ICRA 2025
+</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta http-equiv="imagetoolbar" content="no" />
+<meta http-equiv="KeyWords" content="CORSMAL, robotics, vision, audio, signal processing, competition, challenge, ICRA, human-to-robot, handovers, 2025"/>
+<meta name="image" property="og:image" content="/images/CORSMAL_logo.png">
+
+<link rel="stylesheet" href="css/layout.css" type="text/css" /> 
+<link rel="stylesheet" href="css/teams.css" type="text/css" /> 
+
+<script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>  
+<script type="text/javascript" src="js/jquery.slidepanel.setup.js"></script> 
+<script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
+<script type="text/javascript" src="js/jquery.tabs.setup.js"></script>
+
+<style>
+	
+	#menu_div
+	{
+		position: -webkit-sticky; /* Safari */
+		position: sticky;
+		top: 0;
+		background: #fff;
+	}
+	
+	/* NAVIGATION */
+	nav {0
+		width: 100%;
+		margin: 0 auto;
+		background: #fff;
+		position: static;
+	}
+
+	.fixed-header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%; 
+	}
+
+	/* By Dominik Biedebach @domobch */
+	nav ul {
+		list-style: none;
+		text-align: center;
+	}
+	nav ul li {
+		display: inline-block;
+	}
+	nav ul li a {
+		display: block;
+		padding: 15px;
+		text-decoration: none;
+		color: #aaa;
+		font-weight: 300;
+		margin: 0 10px;
+	}
+	nav ul li a,
+	nav ul li a:after,
+	nav ul li a:before {
+		transition: all .5s;
+	}
+	nav ul li a:hover {
+		color: #555;
+	}
+
+	/* stroke */
+	nav.stroke ul li a,
+	nav.fill ul li a {
+		position: relative;
+	}
+	nav.stroke ul li a:after,
+	nav.fill ul li a:after {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		width: 0%;
+		content: '.';
+		color: transparent;
+		background: #333;
+		height: 1px;
+	}
+	nav.stroke ul li a:hover:after {
+		width: 100%;
+	}
+
+
+	#teams {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		width: 200px;
+		background-color: #f1f1f1;
+	}
+
+	#teams li a {
+		display: block;
+		color: #000;
+		padding: 8px 16px;
+		text-decoration: none;
+	}
+
+	/* Change the link color on hover */
+	#teams li a:hover {
+		background-color: #555;
+		color: white;
+	}
+
+	#dates, #description, #leaderboard, #evaluation, #rules,
+	#documentation {
+		display: block;
+		margin-top: -50px;
+		padding-top: 50px;
+	}
+
+	.hide {
+		display: none;
+	}
+
+	tr:hover {background-color: #f5f5f5;}
+	
+	.tg  {border-collapse:collapse;border-spacing:0;}
+/*	.tg td{border-color:black;border-style:solid;border-width:1px;overflow:hidden;padding:10px 5px;word-break:normal;}*/
+		.tg th{border-color:black;border-style:solid;border-width:1px;font-weight:normal;font-size:14.0pt;overflow:hidden;padding:10px 5px;word-break:normal;}
+			.tg .tg-km2t{border-color:#ffffff;font-weight:bold;font-size:14.0pt;text-align:left;vertical-align:top}
+			.tg .tg-zv4m{border-color:#ffffff;font-size:14.0pt;text-align:left;vertical-align:top}
+
+
+	
+	.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+	  overflow:hidden;padding:10px 5px;word-break:normal;}
+	.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+	  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+	
+	.tg .tg-ekg0{background-color:#EFEFEF;font-weight:bold;text-align:left;vertical-align:top}
+	.tg .tg-xt05{background-color:#D9D9D9;text-align:left;vertical-align:top}
+	.tg .tg-0lax{text-align:left;vertical-align:top}
+	.tg .tg-ktyi{text-align:left;vertical-align:top}
+	.tg .tg-xqm4{background-color:#D9D9D9;font-weight:bold;text-align:left;vertical-align:top}
+
+</style>
+
+
+<script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>  
+<script type="text/javascript" src="js/jquery.slidepanel.setup.js"></script> 
+<script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
+<script type="text/javascript" src="js/jquery.tabs.setup.js"></script>
+
+<link href="../benchmark/dist/css/tabulator.min.css" rel="stylesheet">
+<script type="text/javascript" src="../benchmark/dist/js/tabulator.min.js"></script>
+<link href="https://unpkg.com/tabulator-tables@4.4.3/dist/css/tabulator.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.4.3/dist/js/tabulator.min.js"></script>
+
+<script type="text/javascript" src="../js/leaderboards.js"></script>
+
+
+</head>
+<body id="top">
+	<div class="wrapper row1">
+		<div id="header" class="clear">
+			<div class="fl_left" style="width:33%">
+				<ul>
+					<li>
+						<p>
+							<a href="https://corsmal.eecs.qmul.ac.uk/"><img src="images/CORSMAL_logo.png" style="padding:0px 0px 0px 0px;height:75px" alt="CORSMAL"/></a>
+						</p>
+					</li>
+				</ul>
+			</div>
+			<div style="float:left;width: 33%;margin-top: 12pt;text-align: center;">
+				<span><a href="https://2025.ieee-icra.org/" TARGET = "_BLANK"><img src="images/ICRA-ATL-logo.webp" style="width:65%"></a></span>
+			</div>
+			<div class="fl_right" style="margin-top:12pt;width: 33%;text-align: right;">
+				<b><span style="font-size:12.0pt"><a href="https://sites.google.com/view/rgmc2025" TARGET = "_BLANK">10th Robotic Grasping and<br>Manipulation Competition</a></span></b>
+			</div>
+		</div>
+	</div>
+	<!--2###################################################################################################### --> 
+	<div class="wrapper row2"; style="margin-bottom: 7px;">
+		<div class="rnd"> <!-- ###### --> 
+			<!-- ###### --> 
+		</div>
+	</div>
+	<!-- 3####################################################################################################### --> 
+	<div class="wrapper row1"> 
+		<div id="container" class="clear">
+			<div id="latestnewspage" class="clear">
+				<div style="text-align:center;text-justify:inter-ideograph;margin-bottom:0px">
+					<span style="font-size:16.0pt;"><b>Human-to-Robot Handovers</b></span>
+				</div>
+				<div id="topnav" style="text-align:center;"> 
+				<ul>
+					<li><a href="index.html"><b>Overview</b></a></li> 
+					<li><a href="task.html"><b>Task</b></a></li>
+					<li><a href="competition.html"><b>Competition</b></a></li>
+					<li class="active"><a href="preparation.html"><b>Preparation</b></a>
+					<li><a href="rules.html"><b>Rules</b></a></li> 
+					<li><a href="evaluation.html"><b>Evaluation</b></a></li>
+				</ul>
+			</div>
+			<div>
+				<p>
+					We provide details, instructions, and documentation for preparing the solution and trials of the handovers in your own lab.
+				</p>
+				<br>
+			</div>
+			<div>
+				<b><span style="font-size:14.0pt">Submission</span></b>
+				<br>
+				<ul>
+					<!-- <li>
+						Teams are allowed to submit up to 5 times their results for the set of <a href="#configurations"><u>configurations</u></a>. 
+						For each submission, the leaderboard will be updated.
+						Only the last submission is kept for the ranking.
+					</li> -->
+					<li>
+						Valid submissions include a) the .csv file with the results for each configuration; b) single video or video for each configuration to assess the validity of the results. 
+						Videos can be uploaded to an online platform (e.g., Youtube, Google drive). 
+					</li>
+					<li>
+						Teams should send an email to Dr. <a href="mailto:alessio.xompero@gmail.com"><u>Alessio Xompero</u></a> with the .csv file and the link to the video(s) for each submission.
+					</li>
+					<li>
+						Teams should submit a report with the description of their solution and results (optional).
+					</li>
+				</ul>
+				
+				Template for submitting the results: <a href="resources/rgmc2024_est4_phase1_teamname_submission_v1.csv"><u>here</u></a>. <br>
+				The .csv file must be named according to the following format: <i>rgmc2024_est4_phase1_teamname_submission_v1.csv</i> (replace teamname with the name of your team, and X with the submission number). 
+				<br>
+				<br>
+				For each configuration, the file must provide the results for the following columns:
+				<ul>
+					<li>
+						<i>Target location [mm]</i>: the position (x,y) where the robot should deliver the object. We recommed to provide a picture clearly showing the location of this point.
+					</li>
+					<li>
+						<i>Final location [mm]</i>: the position (x,y) of the centre of the base of the container at the end of the task. 	
+					</li>
+					<!-- <li>
+						<i>Distance [mm]</i>: the Euclidean distance between final location and the target location (in millimetres).
+					</li> -->
+					<li>
+						<i>Handover time [ms]</i>: the total execution time from the moment the person is instructed to grasp the container to the moment the robot releases the gripper at the delivery location to place the container after the handover (unless the handover failed)
+					</li>
+					<li>
+						<i>Initial mass [g]</i>: the measured mass of the (filled) container before the execution of the configuration.
+					</li>
+					<li>
+						<i>Final mass [g]</i>: the measured mass of the (filled) container after the execution of the configuration.
+					</li>
+				</ul>
+			</div>
+			<br>
+			<div style="text-align: justify;">
+				<b><span style="font-size:14.0pt">Objects</span></b>
+				<br>
+				<p>
+					The set of objects for the preparation phase is defined in the CORSMAL Benchmark and consists of four drinking cups with different properties: high deformability, medium transparency (Cup 1); 
+					average deformability, low transparency (Cup 2), average deformability, high transparency (Cup 3), and no deformability, high transparency (Cup 4). 
+					Cup 4 is the plastic wine glass from the YCB object database. 
+					These cups are inexpensive and available worldwide, have different shapes and sizes, different degrees of deformability, include textureless regions, transparencies and reflections that make the vision-based pose estimation challenging. 
+				</p>
+				<div style="text-align:center;">
+					<img src="images/image16.png" style="width:70%;">	
+				</div>
+				<p>
+					<i>Purchase links for set of known drinking cups</i><br>
+					Cup 1: <a href="https://shorturl.at/pFUVY "><u>https://shorturl.at/pFUVY </u></a><br>
+					Cup 2: <a href="https://amzn.to/2QrsXH5"><u>https://amzn.to/2QrsXH5</u></a><br>
+					Cup 3: <a href="https://amzn.to/2JwRk3l"><u>https://amzn.to/2JwRk3l</u></a><br>
+					Cup 4: <a href="https://amzn.to/33zw4AY"><u>https://amzn.to/33zw4AY</u></a><br>
+				</p>
+				<p>
+					Those who do not have or cannot purchase the containers provided in the above links can purchase local objects that resemble the characteristics of the substituted items. Team must inform the organiser of the selected local objects or other objects used to prepare the solution before the start of the competition for official acceptance.	
+				</p>
+				<p>
+					<b>Filling.</b> To vary the properties of each cup (mass and deformability), containers are filled with two different amounts of <b>rice</b> (which are easy to purchase and - unlike liquids - harmless for the hardware): 0% (empty), and 90% (filled) of the total volume of the cup. 
+					The filling amounts are rounded to the smaller quarter of 100 ml to ease the replicability of the configurations. 	
+					Filling amounts are 125 ml (cup 1), 400 ml (cup 2), 450 ml (cup 3), and 300 ml (cup 4).
+				</p>
+				<br>
+			</div>
+			<div id="configurations">
+				<b><span style="font-size:14.0pt">Configurations</span></b>
+				<br>
+				<p>
+					For the execution of the configurations, we recommend to prepare all the objects in advance on a table near the area where the handovers are executed. 
+					This speeds up the execution of all configurations.
+				</p>
+				<p>
+					There are 8 configurations repeated 3 times with a shuffled order for each block. 
+					We recommend inviting a different volunteer for each block of configurations to account for the variability in the execution of the handovers. 
+				</p>
+				<table class="tg">
+					<thead>
+					  <tr>
+						<th class="tg-ekg0"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">ID</span></th>
+						<th class="tg-ekg0"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Object</span></th>
+						<th class="tg-ekg0"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Level</span></th>
+						<th class="tg-ekg0"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Points</span></th>
+					  </tr>
+					</thead>
+					<tbody>
+					  <tr>
+						<td class="tg-0lax">1</td>
+						<td class="tg-ktyi"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Empty wine glass (Cup 4)</span></td>
+						<td class="tg-ktyi"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Easy</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">5</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-0lax">2</td>
+						<td class="tg-ktyi"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Empty red cup (Cup 2)</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Easy</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">5</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-0lax">3</td>
+						<td class="tg-ktyi"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Empty beer cup (Cup 3)</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Medium</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">10</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-0lax">4</td>
+						<td class="tg-ktyi"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Empty white cup (Cup 1)</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Medium</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">10</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-0lax">5</td>
+						<td class="tg-ktyi"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Filled wine glass (Cup 4)</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Difficult</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">15</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-0lax">6</td>
+						<td class="tg-ktyi"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Filled red cup (Cup 2)</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Difficult</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">15</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-0lax">7</td>
+						<td class="tg-ktyi"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Filled beer cup (Cup 3)</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Hard</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">20</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-0lax">8</td>
+						<td class="tg-ktyi"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Filled white cup (Cup 1)</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Hard</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">20</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-0lax">9</td>
+						<td class="tg-ktyi"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Filled red cup (Cup 2)</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Difficult</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">15</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-0lax">10</td>
+						<td class="tg-ktyi"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Filled beer cup (Cup 3)</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Hard</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">20</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-0lax">11</td>
+						<td class="tg-ktyi"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Empty wine glass (Cup 4)</span></td>
+						<td class="tg-ktyi"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Easy</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">5</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-0lax">12</td>
+						<td class="tg-ktyi"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Empty red cup (Cup 2)</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Easy</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">5</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-0lax">13</td>
+						<td class="tg-ktyi"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Filled white cup (Cup 1)</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Hard</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">20</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-0lax">14</td>
+						<td class="tg-ktyi"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Empty beer cup (Cup 3)</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Medium</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">10</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-0lax">15</td>
+						<td class="tg-ktyi"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Filled wine glass (Cup 4)</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Difficult</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">15</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-0lax">16</td>
+						<td class="tg-ktyi"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Empty white cup (Cup 1)</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Medium</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">10</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-0lax">17</td>
+						<td class="tg-ktyi"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Filled red cup (Cup 2)</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Difficult</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">15</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-0lax">18</td>
+						<td class="tg-ktyi"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Empty beer cup (Cup 3)</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Medium</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">10</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-0lax">19</td>
+						<td class="tg-ktyi"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Filled wine glass (Cup 4)</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Difficult</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">15</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-0lax">20</td>
+						<td class="tg-ktyi"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Empty red cup (Cup 2)</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Easy</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">5</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-0lax">21</td>
+						<td class="tg-ktyi"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Empty wine glass (Cup 4)</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Easy</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">5</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-0lax">22</td>
+						<td class="tg-ktyi"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Filled beer cup (Cup 3)</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Hard</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">20</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-0lax">23</td>
+						<td class="tg-ktyi"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Filled white cup (Cup 1)</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Hard</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">20</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-0lax">24</td>
+						<td class="tg-ktyi"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Empty white cup (Cup 1)</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Medium</span></td>
+						<td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">10</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-xqm4"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">TOTAL</span></td>
+						<td class="tg-xt05"></td>
+						<td class="tg-xt05"></td>
+						<td class="tg-xt05"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">300</span></td>
+					  </tr>
+					</tbody>
+					</table>
+			</div>
+			<br>
+			<div>
+				<b><span style="font-size:14.0pt">Procedure</span></b>
+				<br>
+				For each configuration:
+				<ol>
+					<li>Prepare the container either empty or filled with its predefined content type and level</li>
+					<li>Weight the (filled) container before the execution of the task</li>
+					<li>Place the container at the centre of the table, at a distance not reachable by the robotic arm (safety)</li>
+					<li>The volunteer grasps the container from its location with a natural grasp</li>
+					<li>The volunteer carries the container with the intention of handing it over to the robot</li>
+					<li>The robot should track and predict the pose of the container to move the arm towards the handover area</li>
+					<li>The volunteer hands the container over to the robot</li>
+					<li>The robot closes the end effector and grasps the container</li>
+					<li>The robot delivers the container upright within the predefined area.</li>
+					<li>Measure the distance between the initial (e.g. centre of the table) and the delivery location of the container (if not failed)</li>
+					<li>Weight the (filled) container after the execution of the task</li>
+					<!-- Annotate elapsed time for the different phases: human manoeuvring, handover, robot manoeuvring (e.g. through visual inspection on recorded videos or automatic algorithm) -->
+				</ol>
+				<p>
+					Note that the volunteer should avoid assisting the robot (i.e., remaining still at a location until the robot can pick up the container) or assuming an adversarial behaviour (i.e., making it harder for the robot to reach the object). 					
+				</p>
+				<p>
+					This procedure has been revised from the <a href="https://corsmal.eecs.qmul.ac.uk/benchmark/resources/RAL-SI-2020-P19-0835-V1.0.pdf" target="_BLANK"><u>CORSMAL Human-to-Robot Handover Protocol document</u></a>.	
+				</p>
+				<br>
+			</div>
+			<div>
+				<b><span style="font-size:14.0pt">Setting up instructions</span></b>
+				<br>
+				<p>
+					The <i>setup</i> includes a robotic arm with at least 6 degrees of freedom (e.g., UR5, KUKA) and equipped with a 2-finger parallel gripper (e.g., Robotiq 2F-85); a table where the handover is happening as well as where the robot is placed; selected containers and contents; up to two cameras (e.g., Intel RealSense D435i); and a digital scale to weigh the container. The table is covered by a <a href="https://amzn.to/2X5qnaN" title="Purchase link"><u>white table-cloth</u></a>. The two cameras should be placed at 40 cm from the robotic arm, e.g. using tripods, and oriented in such a way that they both view the centre of the table. The illustration below represents the layout in 3D of the setup within a space of 4.5 x 4.5 meters. The table has the following dimensions: W1800 x D600 x H700 mm. 
+				</p>
+				<div style="text-align: center;">
+					<img src="images/workshop_single.png"/ style="width: 75%">							
+				</div>
+				<br>
+				<ul>
+					<li>Teams must prepare the sensing setup such that the cameras are synchronised, calibrated and localised with respect to a calibration board. We recommend the cameras recording RGB sequences at 30 Hz with a resolution of 1280 × 720 pixels (based on the setup used in the CORSMAL Benchmark).</li>
+					<li>Teams should verify the behaviour of the robotic arm prior to the execution of the task (e.g., end-effector, speed, kinematics, etc.)</li>
+					<li>Teams will prepare all configurations with their corresponding container and filling before starting the task. </li>
+					<li>Teams must weigh the mass of the container and content, if any, for each configuration before and after executing the handover to the robot, using a weight scale.</li>
+					<li>A volunteer from the team will be the person who will hand the container over to the robot using a random/natural grasp for each configuration. </li>
+					<li>Any initial robot pose can be chosen with respect to the environment setup; however, the subject is expected to stand on the opposite side of the table with respect to the robot.</li>
+				</ul>
+			<p>
+				These instructions have been revised from the <a href="https://corsmal.eecs.qmul.ac.uk/benchmark/resources/RAL-SI-2020-B19-0835-V1.0.pdf" target="_BLANK"><u>CORSMAL Human-to-Robot Handover Benchmark document</u></a>.
+			</p>
+			<br>
+			</div>
+			<div>
+				<b><span style="font-size:14.0pt">Starting kit and documentation</span></b>
+				<br>
+				<p>
+					<i>Benchmark for human-to-robot handovers of unseen containers with unknown filling</i><br>
+					R. Sanchez-Matilla, K. Chatzilygeroudis, K., A. Modas, N.F. Duarte, A., Xompero, A., P. Frossard, A. Billard, A. Cavallaro<br>
+					IEEE Robotics and Automation Letters, 5(2), pp.1642-1649, 2020<br>
+					[<a href="https://doi.org/10.1109/LRA.2020.2969200" target="_BLANK"><u>Open Access</u></a>]
+				</p>
+				<p>
+					<i>Towards safe human-to-robot handovers of unknown containers</i><br>
+					Y. L. Pang, A. Xompero, C. Oh, A. Cavallaro<br>
+					IEEE International Conference on Robot and Human Interactive Communication (RO-MAN), Virtual, 8-12 Aug 2021<br>
+					[<a href="https://doi.org/10.1109/RO-MAN50785.2021.9515350" target="_BLANK"><u>Open Access</u></a>]
+					[<a href="https://github.com/CORSMAL/safe_handover/" target="_BLANK"><u>code</u></a>]
+					[<a href="http://corsmal.eecs.qmul.ac.uk/safe_handover.html" target="_BLANK"><u>webpage</u></a>]
+				</p>
+				<p>
+					<i>Vision baseline for CORSMAL Benchmark: a vision-based algorithm, part of a larger system, proposed for localising, tracking and estimating the dimensions of a container with a stereo camera.</i><br>
+					[<a href="https://ieeexplore.ieee.org/document/8968407/" target="_BLANK"><u>paper</u></a>]
+					[<a href="https://github.com/CORSMAL/Benchmark" target="_BLANK"><u>code</u></a>]
+					[<a href="http://corsmal.eecs.qmul.ac.uk/benchmark.html" target="_BLANK"><u>webpage</u></a>]
+				</p>
+				<p>
+					<i>LoDE: a method that jointly localises container-like objects and estimates their dimensions with a generative 3D sampling model and a multi-view 3D-2D iterative shape fitting, using two wide-baseline, calibrated RGB cameras.</i><br>
+					[<a href="https://arxiv.org/abs/1911.12354" target="_BLANK"><u>paper</u></a>]
+					[<a href="https://github.com/CORSMAL/LoDE" target="_BLANK"><u>code</u></a>]
+					[<a href="http://corsmal.eecs.qmul.ac.uk/LoDE.html" target="_BLANK"><u>webpage</u></a>]
+				</p>
+				<p>
+					<i>The CORSMAL Challenge contains perception solutions for the estimation of the physical properties of manipulated objects prior to a handover to a robot arm.</i><br>
+					[<a href="../challenge.html"><u>challenge</u></a>]
+					[<a href="https://doi.org/10.1109/ACCESS.2022.3166906" target="_BLANK"><u>paper 1</u></a>]
+					[<a href="https://doi.org/10.48550/arXiv.2203.01977" target="_BLANK"><u>paper 2</u></a>]
+				</p>
+				<p>
+					<i>Additional references</i><br>
+					[<a href="https://corsmal.eecs.qmul.ac.uk/resources/challenge/Additional_References.pdf" target="_BLANK"><u>document</u></a>]
+				</p>	
+				<br>
+			</div>
+		</div>
+	</div>
+	<!-- footer --> </div>  <!--added to clear error with content element --> 
+</body>
+</html>
+
