@@ -1,0 +1,17 @@
+/*
+HTML 5 Template Name: FusionEdge
+File: Slider CSS
+Author: OS Templates
+Author URI: http://www.os-templates.com/
+Licence: <a href="http://www.os-templates.com/template-terms">Website Template Licence</a>
+*/
+
+#container #featured_slide_{position:relative; display:block; width:940px; height:340px; color:#FFFFFF; background-color:#000000; border:10px solid #D6D6D6; overflow:hidden;}
+#container #featured_slide_ ul{width:940px; position:absolute; display:inline; margin:0; padding:0; list-style:none;}
+#container #featured_slide_ ul li{position:relative; display:none; float:left; width:940px; height:340px;}
+#container #featured_slide_ ul li figure{}
+#container #featured_slide_ ul li figure img{width:940px; height:340px;}
+#container #featured_slide_ ul li figure figcaption{position:absolute; display:none; bottom:0; left:0; width:910px; height:inherit; padding:15px; color:#FFFFFF; background-color:#000000; filter:alpha(opacity=70); -moz-opacity:0.7; -khtml-opacity:0.7; opacity:0.7;}
+#container #featured_slide_ ul li figure figcaption h2{margin:0 0 5px 0;}
+#container #featured_slide_ ul li figure figcaption p{margin:0; padding:0;}
+#container #featured_slide_ ul li figure figcaption a{color:#FF9900; background-color:#000000;}

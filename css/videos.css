@@ -1,0 +1,60 @@
+/*
+Template Name: Academic Education
+File: resources CSS
+Author: OS Templates
+Author URI: http://www.os-templates.com/
+Licence: <a href="http://www.os-templates.com/template-terms">Website Template Licence</a>
+*/
+
+#videos{
+	position:relative;
+	margin:0 auto 30px;
+	display:block;
+	width:100%;
+	}
+
+/* ----------------------------------------------Left Column-------------------------------------*/
+
+#videos #left_column{
+	display:block;
+	float:left;
+	width:48%;
+	text-align:justify;
+	}
+
+#videos #left_column .imgholder{
+	margin-bottom:20px;
+	}
+	
+#videos #left_column .imgl{
+	margin:0;
+	}
+	
+#videos #left_column .vidPage{
+	margin:0;
+	margin-top : 5px;
+	float:left;	
+	width:600;	
+	}
+	
+/* ----------------------------------------------Right Column-------------------------------------*/
+
+#videos #right_column{
+	display:block;
+	float:right;
+	width:48%;
+	text-align:justify;
+	}
+
+#videos #right_column .imgholder{
+	margin-bottom:20px;	
+	}
+	
+#videos #right_column .vidPage{
+	margin:0;
+	margin-top : 5px;
+	float:left;	
+	width:336;
+	height:252;
+	}
+

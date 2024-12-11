@@ -1,0 +1,45 @@
+/*
+Template Name: Academic Education
+File: people CSS
+Author: OS Templates
+Author URI: http://www.os-templates.com/
+Licence: <a href="http://www.os-templates.com/template-terms">Website Template Licence</a>
+*/
+
+#people{
+	position:relative;
+	margin:0 auto 30px;
+	display:block;
+	width:100%;
+	}
+
+/* ----------------------------------------------Left Column-------------------------------------*/
+
+#people #column_first{
+	display:block;
+	float:left;
+	width:130px;	
+	margin:0 0 0 20px;	
+	text-align:center;
+	}
+
+/*#people #column_first .imgholder{
+	margin-bottom:20px;
+	}
+	*/
+#people #column_first .imgl{
+	margin:0 0 1px 0; 
+	}
+
+
+#people #column{
+	display:block;
+	float:left;
+	width:130px;
+	margin:0 0 0 20px;	
+	text-align:center;
+	}
+
+#people #column .imgl{
+	margin:0 0 1px 0;
+	}

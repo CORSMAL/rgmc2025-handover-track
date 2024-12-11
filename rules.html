@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="EN" lang="EN" dir="ltr">
+<head profile="http://gmpg.org/xfn/11"> 
+	<link rel="shortcut icon" href="http://corsmal.eecs.qmul.ac.uk/favicon.ico" /> 
+	<!-- Global site tag (gtag.js) - Google Analytics --> 
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134177032-1"></script>
+	<script> window.dataLayer = window.dataLayer  || []; 
+	function gtag(){dataLayer.push(arguments);} 
+	gtag('js', new Date()); 
+
+gtag('config', 'UA-134177032-1'); </script>
+
+<title>
+	CORSMAL | Human-to-Robot Handovers Sub-track | 9th Robotics Grasping and Manipulation Competition | ICRA 2024
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta http-equiv="imagetoolbar" content="no" />
+<meta http-equiv="KeyWords" content="code, software, CORSMAL, robotics, touch, vision, audio, signal processing, human behaviour, competition, challenge, ICASSP"/>
+<meta name="image" property="og:image" content="http://corsmal.eecs.qmul.ac.uk/images/CORSMAL_logo.png">
+
+<link rel="stylesheet" href="../css/layout.css" type="text/css" /> 
+<script type="text/javascript" src="../js/jquery-1.4.1.min.js"></script>  
+<script type="text/javascript" src="../js/jquery.slidepanel.setup.js"></script> 
+<script type="text/javascript" src="../js/jquery-ui-1.7.2.custom.min.js"></script>
+<script type="text/javascript" src="../js/jquery.tabs.setup.js"></script>
+
+<style>
+	
+	#menu_div
+	{
+		position: -webkit-sticky; /* Safari */
+		position: sticky;
+		top: 0;
+		background: #fff;
+	}
+	
+	/* NAVIGATION */
+	nav {0
+		width: 100%;
+		margin: 0 auto;
+		background: #fff;
+		position: static;
+	}
+
+	.fixed-header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%; 
+	}
+
+	/* By Dominik Biedebach @domobch */
+	nav ul {
+		list-style: none;
+		text-align: center;
+	}
+	nav ul li {
+		display: inline-block;
+	}
+	nav ul li a {
+		display: block;
+		padding: 15px;
+		text-decoration: none;
+		color: #aaa;
+		font-weight: 300;
+		margin: 0 10px;
+	}
+	nav ul li a,
+	nav ul li a:after,
+	nav ul li a:before {
+		transition: all .5s;
+	}
+	nav ul li a:hover {
+		color: #555;
+	}
+
+	/* stroke */
+	nav.stroke ul li a,
+	nav.fill ul li a {
+		position: relative;
+	}
+	nav.stroke ul li a:after,
+	nav.fill ul li a:after {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		width: 0%;
+		content: '.';
+		color: transparent;
+		background: #333;
+		height: 1px;
+	}
+	nav.stroke ul li a:hover:after {
+		width: 100%;
+	}
+
+
+	#teams {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		width: 200px;
+		background-color: #f1f1f1;
+	}
+
+	#teams li a {
+		display: block;
+		color: #000;
+		padding: 8px 16px;
+		text-decoration: none;
+	}
+
+	/* Change the link color on hover */
+	#teams li a:hover {
+		background-color: #555;
+		color: white;
+	}
+
+	#dates, #description, #leaderboard, #evaluation, #rules,
+	#documentation {
+		display: block;
+		margin-top: -50px;
+		padding-top: 50px;
+	}
+
+	.hide {
+		display: none;
+	}
+
+	tr:hover {background-color: #f5f5f5;}
+	.tg  {border-collapse:collapse;border-spacing:0;}
+	.tg td{border-color:black;border-style:solid;border-width:1px;overflow:hidden;padding:10px 5px;word-break:normal;}
+		.tg th{border-color:black;border-style:solid;border-width:1px;font-weight:normal;font-size:14.0pt;overflow:hidden;padding:10px 5px;word-break:normal;}
+			.tg .tg-km2t{border-color:#ffffff;font-weight:bold;font-size:14.0pt;text-align:left;vertical-align:top}
+			.tg .tg-zv4m{border-color:#ffffff;font-size:14.0pt;text-align:left;vertical-align:top}
+</style>
+</head>
+<body id="top">
+	<div class="wrapper row1">
+		<div id="header" class="clear">
+			<div class="fl_left" style="width:33%">
+				<ul>
+					<li>
+						<p>
+							<a href="../index.html"><img src="../images/CORSMAL_logo.png" style="padding:0px 0px 0px 0px;height:75px" alt="CORSMAL"/></a>
+						</p>
+					</li>
+				</ul>
+			</div>
+			<div style="float:left;width: 33%;margin-top: 12pt;text-align: center;">
+				<span><a href="https://2024.ieee-icra.org/" TARGET = "_BLANK"><img src="../images/icra24/icra24_logo.svg" style="width:65%"></a></span>
+			</div>
+			<div class="fl_right" style="margin-top:12pt;width: 33%;text-align: right;">
+				<b><span style="font-size:12.0pt"><a href="https://www.cse.usf.edu/~yusun/rgmc/2024.html" TARGET = "_BLANK">9th Robotic Grasping and<br>Manipulation Competition</a></span></b>
+				<!-- <br> -->
+				<!-- <span style="font-size:12.0pt;"><a href="https://2024.ieee-icra.org/" style="color:#00308F">ICRA 2024 (May 13-15)</a></span> -->
+				<!-- <span><a href="https://2024.ieee-icra.org/"><img src="../images/icra24/icra24_logo.svg" style="width:100%"></a></span> -->
+			</div>
+		</div>
+		</div>
+	</div>
+	<!--2###################################################################################################### --> 
+	<div class="wrapper row2"; style="margin-bottom: 7px;">
+		<div class="rnd"> <!-- ###### --> 
+			<!-- ###### --> 
+		</div>
+	</div>
+	<!-- 3####################################################################################################### --> 
+	<div class="wrapper row1"> 
+		<div id="container" class="clear">
+			<div id="latestnewspage" class="clear">
+				<h2>
+					<p class="xmsonormal" style="text-align:center;text-justify:inter-ideograph;margin-bottom:0px">
+						<b><span style="font-size:16.0pt;">Human-to-Robot Handovers</span></b><br>
+						<span style="font-size:14.0pt;">(Essential Skills Sub-Track 4)</span>
+					</p>
+				</h2>
+			<div id="topnav" style="text-align:center;"> 
+				<ul>
+					<li><a href="index.html"><b>Overview</b></a></li> 
+					<li><a href="task.html"><b>Task</b></a></li>
+					<li><a href="competition.html"><b>Competition</b></a></li>
+					<li><a href="preparation.html"><b>Preparation</b></a>
+					<li class="active"><a href="rules.html"><b>Rules</b></a></li> 
+					<li><a href="evaluation.html"><b>Evaluation</b></a></li>
+				</ul>
+			</div>
+				<div id="rules" style="text-align:justify;">
+				<!-- <b><span style="font-size:14.0pt">Rules</span></b> -->
+				<!-- <br> -->
+				<!-- <br> -->
+				<!-- <b><span style="font-size:12.0pt">Teams</span></b>
+				<br>
+				<ul>
+					<li>Teams from academia and industry are equally welcome to participate</li>
+					<li>Teams can include individuals from one or more institutions</li>
+					<li>One person can only participate in one team</li>
+					<li>Each team cannot have more than 5 members (including the team leader)</li>
+					<li>Teams must pre-register using the <a href="https://forms.gle/TyRiie3ZZDXx9sFw5"><u>online form</u></a> or via email to <a href="mailto:andrea.cavallaro@epfl.ch"><u>andrea.cavallaro@epfl.ch</u></a></li>
+					<li>Organisers are not allowed to participate in the competition</li>
+				</ul> -->
+				<!-- <b><span style="font-size:12.0pt">Award</span></b>
+				<ul>
+					<li>Teams able to attend the competition in Yokohama will qualify for a prize-based award</li>
+					<li>Only the best-performing team in Yokohama will win the award.</li>
+				</ul> -->
+				<b><span style="font-size:12.0pt">Solution design and development</span></b>
+				<br>
+				<ul>
+					<!-- <li>Teams are free to choose the platform where to develop their own solution.</li> -->
+					<li>Inferences must be generated automatically by a model that uses images or videos as input</li>
+					<li>No prior knowledge of the objects is available. The only prior knowledge available to the models is the high-level set of categories of the containers (cup, drinking glass, food box).</li>
+					<li>The use of prior 3D object models is not allowed (e.g., the reconstructed shapes of the containers in 3D).</li>
+					<!-- <li>Participants are not allowed to be subjects as well: the subjects should be external to the design and development of the system.</li> -->
+					<li>Each subject is instructed to use only one hand and always the same.</li>
+					<li>The location where the robot needs to deliver the container must be inferred using perception from the initial location and not hard-coded (to be confirmed).</li>
+					<li>Learning across executions of configurations is not allowed: participants must not update/fine-tune the vision/robotic algorithms using the data/measurements captured during the execution of the configurations of the benchmark by the subjects (test time).</li>
+					<li>Online solutions - i.e., solutions that can be run on a continuous stream as for the case of human-to-robot handover - are preferred. To encourage this type of solution, organisers will refer to the CORSMAL real-to-simulation framework that allows the participants to observe models would perform for a human-to-robot handover. </li>
+					<li>Calls to exisiting Large Language Models are allowed.</li>
+					<li>Tactile sensors are allowed as part of the solution.</li>
+					<li>Both RGB and RGB-D inputs can be used for the solution.</li>
+				</ul>
+				<br>
+			</div>
+			
+		</div>
+	</div>
+<!--  	<div class="wrapper row1"> 
+		<div id="header" class="clear" style="padding: 0px 0px 0px 20px;width:920px">
+			<div class="fl_left" style="margin-top: 0px;">
+				<ul style="margin-bottom: 0px;">
+					<li style="margin: 0px 4px 0px 0; padding: 0 0px 0 0;">
+						<p>
+							<b>Partners</b>
+							<br>
+							<br>
+						</p>
+						<p>
+							<a href="https://www.qmul.ac.uk/" TARGET = "_blank"><img src="../images/QMUL_logo.jpg" alt="Queen Mary University of London" style="padding:5px 10px 0px 0px;height:45px;"/></a> 
+							<a href="https://www.epfl.ch/en/home/" TARGET = "_blank"> <img src="../images/EPFL_logo.png" alt="EPFL" style="padding:5px 0px 0px 0px;height:45px;"/></a>
+						</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div> -->
+	<div class="wrapper rowQuickLinks"><br></div>
+	<div class="wrapper bottomPg">
+		<div id="copyright">
+			<div id ="fl_left" style="font-size:12px">[ <a href="http://www.qmul.ac.uk/site/disclaimer/" TARGET = "_BLANK" style="color:rgb(170,170,170)">Disclaimer</a> ]  [ <a href="http://www.qmul.ac.uk/site/privacy/" TARGET = "_BLANK" style="color:rgb(170,170,170)">Privacy</a> ] [ <a href="mailto:cis-web@eecs.qmul.ac.uk" style="color:rgb(170,170,170)">Webmaster</a> ] <br> CIS, School of Electronic Engineering and Computer Science, Queen Mary University of London, Mile End Road, London E1 4NS, UK <br> &copy; Copyright QMUL 2024
+			</div>
+		</div>
+	</div>
+	<!-- footer --> </div>  <!--added to clear error with content element --> 
+</body>
+</html>
+

@@ -1,0 +1,269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="EN" lang="EN" dir="ltr">
+<head profile="http://gmpg.org/xfn/11"> 
+	<link rel="shortcut icon" href="http://corsmal.eecs.qmul.ac.uk/favicon.ico" /> 
+	<!-- Global site tag (gtag.js) - Google Analytics --> 
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134177032-1"></script>
+	<script> window.dataLayer = window.dataLayer  || []; 
+	function gtag(){dataLayer.push(arguments);} 
+	gtag('js', new Date()); 
+
+gtag('config', 'UA-134177032-1'); </script>
+
+<title>
+	CORSMAL | Human-to-Robot Handovers Sub-track | 9th Robotics Grasping and Manipulation Competition | ICRA 2024
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta http-equiv="imagetoolbar" content="no" />
+<meta http-equiv="KeyWords" content="code, software, CORSMAL, robotics, touch, vision, audio, signal processing, human behaviour, competition, challenge, ICASSP"/>
+<meta name="image" property="og:image" content="http://corsmal.eecs.qmul.ac.uk/images/CORSMAL_logo.png">
+
+<link rel="stylesheet" href="../css/layout.css" type="text/css" /> 
+<script type="text/javascript" src="../js/jquery-1.4.1.min.js"></script>  
+<script type="text/javascript" src="../js/jquery.slidepanel.setup.js"></script> 
+<script type="text/javascript" src="../js/jquery-ui-1.7.2.custom.min.js"></script>
+<script type="text/javascript" src="../js/jquery.tabs.setup.js"></script>
+
+<style>
+	
+	#menu_div
+	{
+		position: -webkit-sticky; /* Safari */
+		position: sticky;
+		top: 0;
+		background: #fff;
+	}
+	
+	/* NAVIGATION */
+	nav {0
+		width: 100%;
+		margin: 0 auto;
+		background: #fff;
+		position: static;
+	}
+
+	.fixed-header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%; 
+	}
+
+	/* By Dominik Biedebach @domobch */
+	nav ul {
+		list-style: none;
+		text-align: center;
+	}
+	nav ul li {
+		display: inline-block;
+	}
+	nav ul li a {
+		display: block;
+		padding: 15px;
+		text-decoration: none;
+		color: #aaa;
+		font-weight: 300;
+		margin: 0 10px;
+	}
+	nav ul li a,
+	nav ul li a:after,
+	nav ul li a:before {
+		transition: all .5s;
+	}
+	nav ul li a:hover {
+		color: #555;
+	}
+
+	/* stroke */
+	nav.stroke ul li a,
+	nav.fill ul li a {
+		position: relative;
+	}
+	nav.stroke ul li a:after,
+	nav.fill ul li a:after {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		width: 0%;
+		content: '.';
+		color: transparent;
+		background: #333;
+		height: 1px;
+	}
+	nav.stroke ul li a:hover:after {
+		width: 100%;
+	}
+
+
+	#teams {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		width: 200px;
+		background-color: #f1f1f1;
+	}
+
+	#teams li a {
+		display: block;
+		color: #000;
+		padding: 8px 16px;
+		text-decoration: none;
+	}
+
+	/* Change the link color on hover */
+	#teams li a:hover {
+		background-color: #555;
+		color: white;
+	}
+
+	#dates, #description, #leaderboard, #evaluation, #rules,
+	#documentation {
+		display: block;
+		margin-top: -50px;
+		padding-top: 50px;
+	}
+
+	.hide {
+		display: none;
+	}
+
+	tr:hover {background-color: #f5f5f5;}
+	.tg  {border-collapse:collapse;border-spacing:0;}
+	.tg td{border-color:black;border-style:solid;border-width:1px;overflow:hidden;padding:10px 5px;word-break:normal;}
+		.tg th{border-color:black;border-style:solid;border-width:1px;font-weight:normal;font-size:14.0pt;overflow:hidden;padding:10px 5px;word-break:normal;}
+			.tg .tg-km2t{border-color:#ffffff;font-weight:bold;font-size:14.0pt;text-align:left;vertical-align:top}
+			.tg .tg-zv4m{border-color:#ffffff;font-size:14.0pt;text-align:left;vertical-align:top}
+</style>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+<body id="top">
+	<div class="wrapper row1">
+		<div id="header" class="clear">
+			<div class="fl_left" style="width:33%">
+				<ul>
+					<li>
+						<p>
+							<a href="../index.html"><img src="../images/CORSMAL_logo.png" style="padding:0px 0px 0px 0px;height:75px" alt="CORSMAL"/></a>
+						</p>
+					</li>
+				</ul>
+			</div>
+			<div style="float:left;width: 33%;margin-top: 12pt;text-align: center;">
+				<span><a href="https://2024.ieee-icra.org/" TARGET = "_BLANK"><img src="../images/icra24/icra24_logo.svg" style="width:65%"></a></span>
+			</div>
+			<div class="fl_right" style="margin-top:12pt;width: 33%;text-align: right;">
+				<b><span style="font-size:12.0pt"><a href="https://www.cse.usf.edu/~yusun/rgmc/2024.html" TARGET = "_BLANK">9th Robotic Grasping and<br>Manipulation Competition</a></span></b>
+				<!-- <br> -->
+				<!-- <span style="font-size:12.0pt;"><a href="https://2024.ieee-icra.org/" style="color:#00308F">ICRA 2024 (May 13-15)</a></span> -->
+				<!-- <span><a href="https://2024.ieee-icra.org/"><img src="../images/icra24/icra24_logo.svg" style="width:100%"></a></span> -->
+			</div>
+		</div>
+		</div>
+	</div>
+	<!--2###################################################################################################### --> 
+	<div class="wrapper row2"; style="margin-bottom: 7px;">
+		<div class="rnd"> <!-- ###### --> 
+			<!-- <div id="topnav" style="text-align:right;"> 
+				<ul style="margin-top: 5px;">
+					<li><a href="competition.html"><b>Home</b></a></li> 
+					<li><a href="rules.html"><b>Rules</b></a></li> 
+					<li class="active"><a href="evaluation.html"><b>Evaluation</b></a></li> 
+				</ul>
+			</div> -->
+			<!-- ###### --> 
+		</div>
+	</div>
+	<!-- 3####################################################################################################### --> 
+	<div class="wrapper row1"> 
+		<div id="container" class="clear">
+			<div id="latestnewspage" class="clear">
+				<h2>
+					<p class="xmsonormal" style="text-align:center;text-justify:inter-ideograph;margin-bottom:0px">
+						<b><span style="font-size:16.0pt;">Human-to-Robot Handovers</span></b><br>
+						<span style="font-size:14.0pt;">(Essential Skills Sub-Track 4)</span>
+					</p>
+				</h2>
+			<div id="topnav" style="text-align:center;"> 
+				<ul>
+					<li><a href="index.html"><b>Overview</b></a></li> 
+					<li><a href="task.html"><b>Task</b></a></li>
+					<li><a href="competition.html"><b>Competition</b></a></li>
+					<li><a href="preparation.html"><b>Preparation</b></a>
+					<li><a href="rules.html"><b>Rules</b></a></li> 
+					<li class="active"><a href="evaluation.html"><b>Evaluation</b></a></li>
+				</ul>
+			</div>
+			<div style="text-align:justify;">
+				<b><span style="font-size:14.0pt">Toolkit</span></b>
+				<p>
+					The evaluation toolkit is available at the following GitHub repository: <a href="https://github.com/kerolex/rgmc-icra24-eval-toolkit"><u>rgmc-icra24-eval-toolkit</u></a>.
+				</p>
+				<br>
+			</div>
+			<div style="text-align:justify;">
+				<b><span style="font-size:14.0pt">Scoring and ranking</span></b>
+				<br>
+				<ul>
+					<li>
+						The benchmark scores a total of 100 points.
+					</li>
+					<li>
+						The final score is computed as the aggregation (weighted average) of the scores across the task configurations.
+					</li>
+					<li>
+						The overall ranking is based on the final score.
+					</li>
+					<li>
+						A point-based score is assigned to each task configuration based on the level of difficulty. There are four levels of difficulty. An easy configuration has 10 points. A medium configuration has 15 points. A difficult configuration has 20 points. A hard configuration has 25 points. If the handover fails (i.e., the robot cannot grasp and/or hold the container during the delivery phase or the object falls after the robot places it on the table), the configuration receives 0 points.
+					</li>
+					<li>
+						To assign score points, each configuration should be performed within 5 seconds and containers should be delivered within the predefined area.
+					</li>
+				</ul>
+				<br>
+			</div>
+			<div style="text-align:justify;">
+				<b><span style="font-size:14.0pt">Performance score</span></b>
+				<br>
+				<p>
+					Note that the following score is a revisitation of the performance scores provided in the <a href="../benchmark.html"><u>CORSMAL Benchmark</u></a>.
+				</p>
+				<p>
+					Teams are ranked based on a 100-points score \(S\) that results from the aggregation (weighted average) across all task configurations. Each task configuration \(i\) has a pre-assigned score \(\omega_i\) and accounts for the delivery location \(d_i\), the total execution time \(t_i\), and the final mass of the delivered container \(m_i\). The task score is computed as follows:<br>
+					$$ S = \frac{1}{3} \sum_i \left[ \omega_i \Psi_i \frac{\delta(d_i, \rho)  + \gamma(t_i, \tau, \eta)  + \mu(m_i, \hat{m}_i)}{3}\right],$$
+					where \( [ \cdot ]\)  is the rounding operation to the nearest integer. The score of a configuration is set 0 (not computed) if the container is not delivered within the area or within the maximum allowed time (indicator function \( \Psi_i \in {0,1} \) . The score of all configurations sums up to 300 points and hence we divide by 3 to obtain the 100-point score \(S\). 
+				</p>
+				<p>
+					For the delivery location, we define \(d_i\) as the distance between the position of the centre of the base of the container at the end of the task with respect to the target position (in millimetres or mm). We therefore compute a score based on the following normalisation function:
+					$$ \delta(d_i, \rho) = \begin{cases} \displaystyle 1 - \frac{d_i}{\rho} & \text{if} \quad d_i < \rho \\ \displaystyle 0 & \text{otherwise,} \end{cases} $$
+					where \( \rho \)  is a threshold that defines when an algorithm is unsuccessful for that measure and here represents the radius of the concentric delivery area where the object must be delivered. Specifically, we use as value \( \rho=500 \) mm. 
+				</p>
+				<p>
+					For the total execution time, we define  \(t_i\) (in milliseconds or ms) as the time from the moment the subject is instructed to grasp the container to the moment the robot releases the gripper at the delivery location to place the container after the handover (unless the handover failed). We therefore compute a score based on the same normalisation function as before:
+					$$ \gamma(t_i, \tau, \eta) = \begin{cases} \displaystyle 1 - \frac{\max(t_i, \eta) - \eta}{\tau - \eta} & \text{if} \quad t_i < \tau \\ \displaystyle 0 & \text{otherwise,} \end{cases} $$
+					where \( \tau \) is a threshold that defines when an algorithm is unsuccessful for that measure and here represents the maximum allowed execution time, and \( \eta \) is the minimum expected time to perform a handover. Specifically, we use as values \(\tau=5000\) ms and \(\eta=1000\) ms. 
+				</p>
+				<p>
+					For the final mass of the delivered container, we compute a different normalisation function to account for the measured mass of the filled container - if not empty - before (\(\hat{m}_i\)) and after (\(m_i\)) the execution of the task:
+					$$ \mu(m_i, \hat{m}_i) = \begin{cases} \displaystyle 1 - \frac{|m_i - \hat{m}_i|}{\hat{m}_i} & \text{if} \quad |m_i - \hat{m}_i| < \hat{m}_i \\ \displaystyle 0 & \text{otherwise,} \end{cases} $$
+					to assess the amount of content that was spilled (in grams, or g) due to an inaccurate robot grasp or unstable delivery phase. 
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="wrapper rowQuickLinks"><br></div>
+	<div class="wrapper bottomPg">
+		<div id="copyright">
+			<div id ="fl_left" style="font-size:12px">[ <a href="http://www.qmul.ac.uk/site/disclaimer/" TARGET = "_BLANK" style="color:rgb(170,170,170)">Disclaimer</a> ]  [ <a href="http://www.qmul.ac.uk/site/privacy/" TARGET = "_BLANK" style="color:rgb(170,170,170)">Privacy</a> ] [ <a href="mailto:cis-web@eecs.qmul.ac.uk" style="color:rgb(170,170,170)">Webmaster</a> ] <br> CIS, School of Electronic Engineering and Computer Science, Queen Mary University of London, Mile End Road, London E1 4NS, UK <br> &copy; Copyright QMUL 2024
+			</div>
+		</div>
+	</div>
+	<!-- footer --> </div>  <!--added to clear error with content element --> 
+</body>
+</html>
+

@@ -1,0 +1,55 @@
+/*
+Template Name: Academic Education
+File: people CSS
+Author: OS Templates
+Author URI: http://www.os-templates.com/
+Licence: <a href="http://www.os-templates.com/template-terms">Website Template Licence</a>
+*/
+
+#books_keyfacts{
+	position:relative;
+	margin:0 auto 30px;
+	display:block;
+	width:100%;
+	}
+
+/* ----------------------------------------------Left Column-------------------------------------*/
+
+#books_keyfacts #column_first{
+	display:block;
+	float:left;
+	width:130px;	
+	margin:0 0 0 85px;	
+	text-align:center;
+	}
+
+/*#books_keyfacts #column_first .imgholder{
+	margin-bottom:20px;
+	}
+	*/
+#books_keyfacts #column_first .imgl{
+	margin:0 0 20px 0; 
+	}
+
+
+#books_keyfacts #column{
+	display:block;
+	float:left;
+	width:23%;/*13.2%;*/
+	margin: 0 0.5% 0 0.5%;
+/*	padding:1% 1% 0 2%;	*/
+	text-align:center;
+	}
+
+#books_keyfacts #column .imgl{
+	margin:0 0 20px 0;
+	}
+
+#books_keyfacts #Twocolumn{
+	display:block;
+	float:left;
+	width:49%;
+	margin: 0 0 0 0;
+/*	padding:1% 1% 0 2%;	*/
+	text-align:left;
+	}

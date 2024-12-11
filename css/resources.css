@@ -1,0 +1,118 @@
+/*
+Template Name: Academic Education
+File: resources CSS
+Author: OS Templates
+Author URI: http://www.os-templates.com/
+Licence: <a href="http://www.os-templates.com/template-terms">Website Template Licence</a>
+*/
+
+#resources{
+	position:relative;
+	margin:0 auto 30px;
+	display:block;
+	width:100%;
+	}
+
+/* ----------------------------------------------Left Column-------------------------------------*/
+
+#resources #left_column{
+	display:block;
+	float:left;
+	width:290px;
+	text-align:center;
+	}
+
+#resources #left_column .imgholder{
+	margin-bottom:20px;
+	}
+	
+#resources #left_column .imgl{
+	margin:0;
+	}
+
+/* ----------------------------------------------center_column-------------------------------------*/
+
+#resources #center_column{
+	display:block;
+	float:left;
+	width:290px;
+	margin:0 0 0 20px;	
+	text-align:center;
+	}
+
+#resources #center_column ul{
+	margin:0;
+	padding:0;
+	list-style:none;	
+	}
+
+#resources #center_column li{
+	display:block;
+	width:100%;
+	margin:0 0 20px 0;
+	padding:0 0 20px 0;
+	list-style:none;
+	border-bottom:1px solid #06213F;
+	}
+
+#center_column .center_column{
+	display:block;
+	float:right;
+	width:270px;
+	margin:0;
+	padding:0;
+	}
+
+#center_column .center_column p{
+	margin:0 0 8px 0;
+	padding:0;	
+	}
+
+#center_column .imgl{
+	margin:0;
+	}
+
+/* ----------------------------------------------Right Column-------------------------------------*/
+
+#resources #right_column{
+	display:block;
+	float:left;
+	width:290px;
+	margin:0 0 0 20px;
+	text-align:center;
+	}
+
+#resources #right_column .holder{
+	display:block;
+	width:100%;
+	margin-bottom:20px;
+	}
+
+#resources #right_column .apply a{
+	display:block;
+	width:230px;
+	height:100px;
+	margin-bottom:20px;
+	color:#666666;
+	background-color:#DEDACB;
+	font-size:14px;
+	text-transform:uppercase;
+	overflow:hidden;
+	}
+
+#resources #right_column .apply a strong{
+	display:block;
+	float:right;
+	width:130px;
+	height:72px;
+	padding-top:28px;
+	text-align:center;
+	cursor:pointer; /* IE7 Doesnt render the cursor properly so this is needed */
+	}
+
+#resources #right_column .apply img{
+	display:block;
+	float:left;
+	width:336px;
+	height:252px;
+	}

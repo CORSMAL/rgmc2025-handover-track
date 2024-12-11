@@ -1,0 +1,51 @@
+/*
+Template Name: Academic Education
+File: people CSS
+Author: OS Templates
+Author URI: http://www.os-templates.com/
+Licence: <a href="http://www.os-templates.com/template-terms">Website Template Licence</a>
+*/
+
+#people_msc_CV{
+	position:relative;
+	margin:0 auto 30px;
+	display:block;
+	width:100%;
+	}
+
+/* ----------------------------------------------Left Column-------------------------------------*/
+
+#people_msc_CV #column_first{
+	display:block;
+	float:left;
+	width:130px;	
+	margin:0 0 0 85px;	
+	text-align:center;
+	}
+
+/*#people_msc_CV #column_first .imgholder{
+	margin-bottom:20px;
+	}
+	*/
+#people_msc_CV #column_first .imgl{
+	margin:0 0 20px 0; 
+	}
+
+
+#people_msc_CV #column{
+	display:block;
+	float:left;
+	width:430px;
+	padding:10px 10px 0 20px;	
+	text-align:left;
+	}
+
+#people_msc_CV #column .imgl{
+	margin:0 0 20px 0;
+	}
+	
+#people_msc_CV #button{
+	display:block;
+	float:right;
+	margin-left:130px;
+	}

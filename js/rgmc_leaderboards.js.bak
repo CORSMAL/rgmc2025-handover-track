@@ -1,0 +1,11 @@
+var preparation_table =
+[
+    {id:1,team:"BUPT DexRobot",score:0.00.toFixed(2)},
+    {id:2,team:"ETH SRL",score:0.00.toFixed(2)},
+    {id:3,team:"CASIA-YIT-HAIZHICHE",score:0.00.toFixed(2)},
+    {id:4,team:"SirsIIT",score:0.00.toFixed(2)},
+    {id:5,team:"CIS-QMUL",score:0.00.toFixed(2)},
+    {id:6,team:"Air-jnu",score:0.00.toFixed(2)},
+    {id:7,team:"XJTU_Colab",score:0.00.toFixed(2)},
+    {id:8,team:"TCS",score:0.00.toFixed(2)}
+];
