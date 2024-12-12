@@ -270,7 +270,7 @@ gtag('config', 'UA-134177032-1'); </script>
 			</div>
 			<div>
 				<p>
-					The competition will be held in Atlanta on Thursday May 22. Teams need to execute the human-to-robot handover configurations with unknown objects that organizers will provide on-site only once.
+					The competition will be held in Atlanta on Thursday May 22. Teams will execute the human-to-robot handover configurations with unknown objects that organizers will provide on-site only once.
 				</p>
 			</div>
 			<br>
@@ -278,7 +278,7 @@ gtag('config', 'UA-134177032-1'); </script>
 				<b><span style="font-size:14.0pt">Objects</span></b>
 				<br>
 				<p>
-					The set of objects for the competition consists of 6 containers that are unknown to the teams to test the generalisation capabilities of the system to adapt to novel and unseen objects. These containers may range between drinking cups and food containers. These containers may be filled with a content different from rice and with a different amount from the set used for the preparation phase.
+					The set of objects for the competition consists of 6 containers that are unknown to the teams to test the generalisation capabilities of the system to adapt to novel and unseen objects. These containers may range between drinking cups and food containers. These containers may be filled with a content different from rice and with a different amount from the set used for the qualification phase.
 				</p>
 			</div>
 			<br>
@@ -287,16 +287,11 @@ gtag('config', 'UA-134177032-1'); </script>
 				<br>
 				<ul>				
 					<li>
-						Organizers will provide a table (dimensions: W1800xD600xH700 mm; W: width, D: depth, H: height; thickness: 15 mm).
-					</li>
-					<li>
-						Two UR5 robotics arms will be available on-site (only for teams that declared cannot bringing their own robotic arm).
-						Only one robotic arm is equipped with a 2-parallel finger Robotiq gripper.
-					</li>
-					<li>
-						Teams are expected to bring their own setup. This includes robotic arm, end effector (e.g., 2-finger gripper, such as Robotiq), 
-						laptop/workstation (tower PC with monitor), cameras (with tripods, USB-C cables), digital scale, calibration pattern, 
+						Teams are expected to bring their own setup. This includes robotic arm, end effector (e.g., 2-finger gripper, such as Robotiq), laptop/workstation (tower PC with monitor), cameras (with tripods, USB-C cables), digital scale, calibration pattern, 
 						sockets extension lead, ethernet cable connecting PCs and robotic arm, socket adapter.
+					</li>
+					<li>
+						Five UR5e and five Franka robots will be provided to qualified teams without hardware (as declared on the application form). More information will be provided in the next months.
 					</li>
 					<li>
 						Teams are expected to mount their own setup configuration.
@@ -304,33 +299,16 @@ gtag('config', 'UA-134177032-1'); </script>
 					<li>
 						For <i>safety</i>, a second person (e.g., from the team) must be ready to stop the robot in case of an anomalous behaviour. 
 					</li>
+					<li>See <a href="preparation.html#setting-up-instructions"><u>setting up instructions</u></a> for more details on how to prepare your setup at the conference site.</li>
+					<li>
+						WiFi on the conference site might be unstable and unreliable. We encourage teams to take this aspect in account when designing their solution if calls to API via the Internet is needed.
+					</li>
+					<li>
+						We remind teams that illumination conditions can differ at the conference site and hence affecting the perception system.
+					</li>
 				</ul>
 			</div>
 			<br>
-			<div>
-				<b><span style="font-size:14.0pt">Setting up instructions</span></b>
-				<br>
-				<p>
-					The <i>setup</i> includes a robotic arm with at least 6 degrees of freedom (e.g., UR5, KUKA) and equipped with a 2-finger parallel gripper (e.g., Robotiq 2F-85); a table where the handover is happening as well as where the robot is placed; selected containers and contents; up to two cameras (e.g., Intel RealSense D435i); and a digital scale to weigh the container. The two cameras should be placed at 40 cm from the robotic arm, e.g. using tripods, and oriented in such a way that they both view the centre of the table. The illustration below represents the layout in 3D of the setup within a space of 4x4 meters. 
-				</p>
-				<div style="text-align: center;">
-					<img src="images/workshop_single.png"/ style="width: 75%">		
-				</div>
-				<br>
-				<ul>
-					
-					<li>Teams must prepare the sensing setup such that the cameras are synchronised, calibrated and localised with respect to a calibration board. We recommend the cameras recording RGB sequences at 30 Hz with a resolution of 1280 × 720 pixels (based on the setup used in the CORSMAL Benchmark).</li>
-					<li>Teams should verify the behaviour of the robotic arm prior to the execution of the task (e.g., end-effector, speed, kinematics, etc.)</li>
-					<li>Teams must weigh the mass of the container and content, if any, for each configuration before and after executing the handover to the robot, using a weight scale.</li>
-					<li>Teams will execute each handover configuration only once.</li>
-					<li>A volunteer from another team will be the person who will hand the container over to the robot using a random/natural grasp for each configuration. </li>
-					<li>Any initial robot pose can be chosen with respect to the environment setup; however, the volunteeer is expected to stand on the opposite side of the table with respect to the robot.</li>
-				</ul>
-			<p>
-				These instructions have been revised from the <a href="https://corsmal.eecs.qmul.ac.uk/benchmark/resources/RAL-SI-2020-B19-0835-V1.0.pdf" target="_BLANK"><u>CORSMAL Human-to-Robot Handover Benchmark document</u></a>.
-			</p>
-			<br>
-			</div>
 			<div>
 				<b><span style="font-size:14.0pt">Procedure</span></b>
 				<br>
@@ -361,10 +339,10 @@ gtag('config', 'UA-134177032-1'); </script>
 			<div>
 				<b><span style="font-size:14.0pt">Submission</span></b>
 				<br>
-				After completing the set of configurations, teams should send a .csv file with the results for each configuration by email to <a href="mailto:a.xompero@qmul.ac.uk"><u>Alessio Xompero</u></a>.
+				After completing the set of configurations, teams will send a .csv file with the results for each configuration by email.
 				<br>				
-				Template for submitting the results: <a href="resources/rgmc2024_est4_phase2_teamname_submission_v1.csv"><u>here</u></a>. <br>
-				The .csv file must be named according to the following format: <i>rgmc2024_est4_phase2_teamname_submission_v1.csv</i> (replace teamname with the name of your team, and X with the submission number). 
+				Template for submitting the results: <a href="resources/rgmc-icra2025_handovers_teamname_v1.csv"><u>here</u></a>. <br>
+				The .csv file must be named according to the following format: <i>rgmc-icra2025_handovers_teamname_vX.csv</i> (replace teamname with the name of your team, and X with the submission number). 
 				<br>
 				<br>
 				For each configuration, the file must provide the results for the following columns:
@@ -385,6 +363,9 @@ gtag('config', 'UA-134177032-1'); </script>
 						<i>Final mass [g]</i>: the measured mass of the (filled) container after the execution of the configuration.
 					</li>
 				</ul>
+				<p>
+					Organizers will provide the set of handovers configurations to fill the submission file on the competition day.
+				</p>
 			</div>
 			<br>
 		</div>
