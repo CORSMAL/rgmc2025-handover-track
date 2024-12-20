@@ -228,7 +228,7 @@ gtag('config', 'UA-134177032-1'); </script>
 					The <i>setup</i> includes a robotic arm with at least 6 degrees of freedom (e.g., UR5, KUKA) and equipped with a 2-finger parallel gripper (e.g., Robotiq 2F-85); a table where the handover is happening as well as where the robot is placed; selected containers and contents; up to two cameras (e.g., Intel RealSense D435i); and a digital scale to weigh the container. The table is covered by a <a href="https://amzn.to/2X5qnaN" title="Purchase link"><u>white table-cloth</u></a>. The two cameras should be placed at 40 cm from the robotic arm, e.g. using tripods, and oriented in such a way that they both view the centre of the table. The illustration below represents the layout in 3D of the setup within a space of 4.5 x 4.5 meters.
 				</p>
 				<div style="text-align: center;">
-					<img src="images/workshop_single.png"/ style="width: 75%">							
+					<img src="images/rgmc10-icra25-handover-3Dmodel.webp"/ style="width: 75%">							
 				</div>
 				<br>
 				<ul>
@@ -247,11 +247,19 @@ gtag('config', 'UA-134177032-1'); </script>
 			<div id="starting-kit">
 				<b><span style="font-size:14.0pt">Starting kit and documentation</span></b>
 				<br>
+				<br>
+				<b><span style="font-size:12.0pt">Reference publications</span></b>
 				<p>
 					<i>Benchmark for human-to-robot handovers of unseen containers with unknown filling</i><br>
 					R. Sanchez-Matilla, K. Chatzilygeroudis, K., A. Modas, N.F. Duarte, A., Xompero, A., P. Frossard, A. Billard, A. Cavallaro<br>
 					IEEE Robotics and Automation Letters, 5(2), pp.1642-1649, 2020<br>
 					[<a href="https://doi.org/10.1109/LRA.2020.2969200" target="_BLANK"><u>Open Access</u></a>]
+				</p>
+				<p>
+					<i>The CORSMAL benchmark for the prediction of the properties of containers</i><br>
+					A. Xompero, S. Donaher, V. Iashin, F. Palermo, G. Solak, C. Coppola, R. Ishikawa, Y. Nagao, R. Hachiuma, Q. Liu, F. Feng, C. Lan, R. H. M. Chan, G. Christmann, J. Song, G. Neeharika, C. K. T. Reddy, D. Jain, B. U. Rehman, A. Cavallaro<br>
+					IEEE Access, vol. 10, 2022.
+					[<a href="https://doi.org/10.1109/ACCESS.2022.3166906" target="_BLANK"><u>Open Access</u></a>]
 				</p>
 				<p>
 					<i>Towards safe human-to-robot handovers of unknown containers</i><br>
@@ -260,18 +268,6 @@ gtag('config', 'UA-134177032-1'); </script>
 					[<a href="https://doi.org/10.1109/RO-MAN50785.2021.9515350" target="_BLANK"><u>Open Access</u></a>]
 					[<a href="https://github.com/CORSMAL/safe_handover/" target="_BLANK"><u>code</u></a>]
 					[<a href="http://corsmal.eecs.qmul.ac.uk/safe_handover.html" target="_BLANK"><u>webpage</u></a>]
-				</p>
-				<p>
-					<i>Vision baseline for CORSMAL Benchmark: a vision-based algorithm, part of a larger system, proposed for localising, tracking and estimating the dimensions of a container with a stereo camera.</i><br>
-					[<a href="https://ieeexplore.ieee.org/document/8968407/" target="_BLANK"><u>paper</u></a>]
-					[<a href="https://github.com/CORSMAL/Benchmark" target="_BLANK"><u>code</u></a>]
-					[<a href="http://corsmal.eecs.qmul.ac.uk/benchmark.html" target="_BLANK"><u>webpage</u></a>]
-				</p>
-				<p>
-					<i>LoDE: a method that jointly localises container-like objects and estimates their dimensions with a generative 3D sampling model and a multi-view 3D-2D iterative shape fitting, using two wide-baseline, calibrated RGB cameras.</i><br>
-					[<a href="https://arxiv.org/abs/1911.12354" target="_BLANK"><u>paper</u></a>]
-					[<a href="https://github.com/CORSMAL/LoDE" target="_BLANK"><u>code</u></a>]
-					[<a href="http://corsmal.eecs.qmul.ac.uk/LoDE.html" target="_BLANK"><u>webpage</u></a>]
 				</p>
 				<p>
 					<i>The CORSMAL Challenge contains perception solutions for the estimation of the physical properties of manipulated objects prior to a handover to a robot arm.</i><br>
@@ -284,6 +280,28 @@ gtag('config', 'UA-134177032-1'); </script>
 					[<a href="https://corsmal.eecs.qmul.ac.uk/resources/challenge/Additional_References.pdf" target="_BLANK"><u>document</u></a>]
 				</p>	
 				<br>
+				<b><span style="font-size:12.0pt">Reference software</span></b>
+				<p>
+					<i>Vision baseline</i><br>
+					A vision-based algorithm, part of a larger system, proposed for localising, tracking and estimating the dimensions of a container with a stereo camera.<br>
+					[<a href="https://ieeexplore.ieee.org/document/8968407/" target="_BLANK"><u>paper</u></a>]
+					[<a href="https://github.com/CORSMAL/Benchmark" target="_BLANK"><u>code</u></a>]
+					[<a href="http://corsmal.eecs.qmul.ac.uk/benchmark.html" target="_BLANK"><u>webpage</u></a>]
+				</p>
+				<p>
+					<i>LoDE</i><br>
+					A method that jointly localises container-like objects and estimates their dimensions with a generative 3D sampling model and a multi-view 3D-2D iterative shape fitting, using two wide-baseline, calibrated RGB cameras.<br>
+					[<a href="https://arxiv.org/abs/1911.12354" target="_BLANK"><u>paper</u></a>]
+					[<a href="https://github.com/CORSMAL/LoDE" target="_BLANK"><u>code</u></a>]
+					[<a href="http://corsmal.eecs.qmul.ac.uk/LoDE.html" target="_BLANK"><u>webpage</u></a>]
+				</p>
+				<br>
+				<b><span style="font-size:12.0pt">Reference data</span></b>
+				<p>
+				<i>CORSMAL Containers Manipulation (1.0) [Data set]</i><br>
+  				A. Xompero, R. Sanchez-Matilla, R. Mazzon, and A. Cavallaro<br>
+  				Queen Mary University of London. <a href="https://doi.org/10.17636/101CORSMAL1"><u>https://doi.org/10.17636/101CORSMAL1</u></a><br>
+  			</p>
 			</div>
 		</div>
 	</div>
