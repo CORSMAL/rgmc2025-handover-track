@@ -16,6 +16,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tbody>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="http://www.eecs.qmul.ac.uk/~ax300"><img src="https://avatars.githubusercontent.com/u/7253675?v=4?s=100" width="100px;" alt="Alessio Xompero, PhD"/><br /><sub><b>Alessio Xompero, PhD</b></sub></a><br /><a href="https://github.com/CORSMAL/rgmc2025-handover-track/commits?author=kerolex" title="Code">💻</a> <a href="#content-kerolex" title="Content">🖋</a> <a href="#eventOrganizing-kerolex" title="Event Organizing">📋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/coh1211"><img src="https://avatars.githubusercontent.com/u/40457418?v=4?s=100" width="100px;" alt="Changjae Oh"/><br /><sub><b>Changjae Oh</b></sub></a><br /><a href="#eventOrganizing-coh1211" title="Event Organizing">📋</a></td>
     </tr>
   </tbody>
 </table>

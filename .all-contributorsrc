@@ -8,6 +8,15 @@
   "commitConvention": "angular",
   "contributors": [
     {
+      "login": "coh1211",
+      "name": "Changjae Oh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40457418?v=4",
+      "profile": "https://github.com/coh1211",
+      "contributions": [
+        "eventOrganizing"
+      ]
+  },
+  {
       "login": "kerolex",
       "name": "Alessio Xompero, PhD",
       "avatar_url": "https://avatars.githubusercontent.com/u/7253675?v=4",
