@@ -1,0 +1,28 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitType": "docs",
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "kerolex",
+      "name": "Alessio Xompero, PhD",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7253675?v=4",
+      "profile": "http://www.eecs.qmul.ac.uk/~ax300",
+      "contributions": [
+        "code",
+        "content",
+        "eventOrganizing"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "skipCi": true,
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "projectName": "rgmc2025-handover-track",
+  "projectOwner": "CORSMAL"
+}
