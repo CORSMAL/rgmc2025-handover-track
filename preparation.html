@@ -37,12 +37,9 @@
 <script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
 <script type="text/javascript" src="js/jquery.tabs.setup.js"></script>
 
-<link href="../benchmark/dist/css/tabulator.min.css" rel="stylesheet">
-<script type="text/javascript" src="../benchmark/dist/js/tabulator.min.js"></script>
 <link href="https://unpkg.com/tabulator-tables@4.4.3/dist/css/tabulator.min.css" rel="stylesheet">
 <script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.4.3/dist/js/tabulator.min.js"></script>
-
-<script type="text/javascript" src="../js/leaderboards.js"></script>
+<script type="text/javascript" src="js/leaderboards.js"></script>
 
 
 </head>
@@ -92,10 +89,157 @@
 			</div>
 			<div>
 				<p>
-					We provide details, instructions, and documentation for preparing the solution and trials of the handovers in your own lab.
+					We provide details, <a href="#setting-up-instructions"><u>instructions</u></a>, and <a href="#starting-kit"><u>documentation</u></a> for preparing the solution, including reference software, publications, and data.
+				</p>
+				<p>
+					We encourage teams to perform the handover configurations of the <a href="https://corsmal.eecs.qmul.ac.uk/benchmark.html"><u>CORSMAL Benchmark protocol</u></a> remotely in their laboratory to prepare for the on-site competition (see also the open access <a href="https://doi.org/10.1109/LRA.2020.2969200" target="_BLANK"><u>publication</u></a>). Results will be submitted to the track organisers and teams will be ranked on the public leaderboard in this page based on the performance scores of the benchmarking protocol. 
+				</p>
+				<p>
+					The <a href="https://doi.org/10.17636/101CORSMAL1" target="_BLANK"><u>CORSMAL Containers Manipulation dataset</u></a> can be used to design perception-based solutions for the approaching phase and prior to the handover of the object to a robot.
 				</p>
 				<br>
 			</div>
+			<div id="corsmal-leaderboard">
+				<b><span style="font-size:14.0pt">Leaderboards - CORSMAL Benchmark</span></b>
+				<p>
+					Teams are ranked by the benchmark score.
+				</p>
+				<br>
+				<b><span style="font-size:12.0pt">Benchmark scores</span></b>
+				<p>
+					We provide also the results grouped by vision subsystem, robotic subsystem, and completion of the overall task.
+				</p>
+				<p align="justify">
+					<div class="corsmal-overall" id="corsmal-overall"></div>
+					<script type="text/javascript">
+						var table = new Tabulator("#corsmal-overall",
+						{
+							
+							height:"150px",
+							reactiveData:true, //turn on data reactivity
+							data:corsmal_table, //load data into table
+							columns:[
+							{title:"Name", field:"name"},
+							{title:"Benchmark", field:"score", sorter:"number"},
+							{title:"Vision", field:"vision", sorter:"number"},
+							{title:"Robotics", field:"robotics", sorter:"number"},
+							{title:"Overall task", field:"global", sorter:"number"},
+							],
+							initialSort:[
+								{column:"score", dir:"desc"}, //sort by this first
+								]
+							});
+						</script>
+					</p>
+				<b><span style="font-size:12.0pt">Results by individual scores</span></b>
+				<br>
+					<a class="papercite_pdf" title="Click to make the legend appear/disappear" onclick="AppearLegend('legend_scores')"><u>Legend</u></a>
+					<div align="justify" id="legend_scores" style="display:none;">
+						<br>
+						<div style="float:left;width: 33%;">
+    				Vision subsystem:<br>
+	    			- s1: Width at the top<br>
+	    			- s2: Width at the bottom<br>
+	    			- s3: Height<br>
+	    			- s4: Mass (cup + filling)<br>
+	    			- s5: Fullness<br>	
+	    			<br>
+    			</div>
+    			<div style="float:left;width: 33%;">
+    				Robotic subsystem:<br>
+    				- s6: Mass (cup + filling)<br>
+    				- s7: Human-hand pose prediction<br>
+    				- s8: End-effector<br>
+    				<br>
+    			</div>
+    			<div style="float:left;width: 33%;">
+    				Overall task:<br>
+    				- s9: Delivery location<br>	
+    				- s10: Mass of the delivered filling<br>
+    				- s11: Human maneuvering time<br>
+    				- s12: Handover time<br>
+    				- s13: Robot maneuvering time<br>
+    				<br>
+    			</div>
+
+				</div>
+				<p align="justify" style="clear:left">
+					<div class="corsmal-scores" id="corsmal-scores"></div>
+					<script type="text/javascript">
+						var table = new Tabulator("#corsmal-scores",
+						{
+							height:"150px",
+							reactiveData:true, //turn on data reactivity
+							data:corsmal_table, //load data into table
+							columns:[
+							{title:"Name", field:"name"},
+							// {title:"Benchmark", field:"score", sorter:"number"},
+							{title:"s1", field:"s1", sorter:"number"},
+							{title:"s2", field:"s2", sorter:"number"},
+							{title:"s3", field:"s3", sorter:"number"},
+							{title:"s4", field:"s4", sorter:"number"},
+							{title:"s5", field:"s5", sorter:"number"},
+							{title:"s6", field:"s6", sorter:"number"},
+							{title:"s7", field:"s7", sorter:"number"},
+							{title:"s8", field:"s8", sorter:"number"},
+							{title:"s9", field:"s9", sorter:"number"},
+							{title:"s10", field:"s10", sorter:"number"},
+							{title:"s11", field:"s11", sorter:"number"},
+							{title:"s12", field:"s12", sorter:"number"},
+							{title:"s13", field:"s13", sorter:"number"},
+							],
+							initialSort:[
+								{column:"score", dir:"desc"}, //sort by this first
+								]
+							});
+						</script>
+				</p>
+					<b><span style="font-size:12.0pt">Results by cups, filling amount, grasp types, and handover locations</span></b>
+					<br>
+					<a class="papercite_pdf" title="Click to make the legend appear/disappear" onclick="AppearLegend('legend_groups')"><u>Legend</u></a>
+    		<p align="justify" id="legend_groups" style="display:none;">
+    			- C1: Cup 1<br>
+    			- C2: Cup 2<br>
+    			- C3: Cup 3<br>
+    			- C4: Cup 4<br>
+    			- G1: Grasp 1<br>
+    			- G2: Grasp 2<br>
+    			- G3: Grasp 3<br>
+    			- HO-L: handover left location<br>
+    			- HO-C: handover centre location<br>
+    			- HO-R: handover right location
+    		</p>
+					<p align="justify">
+					<div class="corsmal-groups" id="corsmal-groups"></div>
+					<script type="text/javascript">
+						var table = new Tabulator("#corsmal-groups",
+						{
+							height:"150px",
+							reactiveData:true, //turn on data reactivity
+							data:corsmal_table, //load data into table
+							columns:[
+							{title:"Name", field:"name"},
+							{title:"C1", field:"cup1", sorter:"number"},
+							{title:"C2", field:"cup2", sorter:"number"},
+							{title:"C3", field:"cup3", sorter:"number"},
+							{title:"C4", field:"cup4", sorter:"number"},
+							{title:"Empty", field:"empty", sorter:"number"},
+							{title:"Filled", field:"filled", sorter:"number"},
+							{title:"G1", field:"grasp1", sorter:"number"},
+							{title:"G2", field:"grasp2", sorter:"number"},
+							{title:"G3", field:"grasp3", sorter:"number"},
+							{title:"HO-L", field:"left", sorter:"number"},
+							{title:"HO-C", field:"center", sorter:"number"},
+							{title:"HO-R", field:"right", sorter:"number"},
+							],
+							initialSort:[
+								{column:"score", dir:"desc"}, //sort by this first
+								]
+							});
+						</script>
+					</p>
+			</div>
+			<br>
 			<div id="setting-up-instructions">
 				<b><span style="font-size:14.0pt">Setting up instructions</span></b>
 				<br>
