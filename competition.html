@@ -174,9 +174,6 @@
 						sockets extension lead, ethernet cable connecting PCs and robotic arm, socket adapter.
 					</li>
 					<li>
-						Five UR5e and five Franka robots will be provided to qualified teams without hardware (as declared on the application form). More information will be provided in the next months.
-					</li>
-					<li>
 						Teams are expected to mount their own setup configuration.
 					</li>
 					<li>
@@ -190,28 +187,51 @@
 						We remind teams that illumination conditions can differ at the conference site and hence affecting the perception system.
 					</li>
 				</ul>
+				<span style="font-size:12.0pt"><i>Shipping information</i></span>
+				<p>
+					RGMC is assigned to <b>Booth # C03</b>.<br>
+					Please use booth # if you need to ship to Atlanta or order any additional services/equipment.<br><br>
+					Further information and all additional services can be found <a href="https://www.freemanco.com/store/show/landing?nav=02&showID=533615&review=true" target="_BLANK"><u>here</u></a>.
+				</p>
 			</div>
 			<br>
 			<div>
 				<b><span style="font-size:14.0pt">Procedure</span></b>
 				<br>
-				For each configuration:
+				The following are instructions for each handover configuration (predefined combination of a container with a content type and amount).
+				<br><br>
+				<i>For the operator (or second team member)</i><br>
+				Before starting the handover configuration:
 				<ol>
-					<li>Prepare the container either empty or filled with its predefined content type and level</li>
+					<li>Prepare the container either empty or filled with its predefined content type and amount</li>
 					<li>Weight the (filled) container before the execution of the task</li>
 					<li>Place the container at the centre of the table, at a distance not reachable by the robotic arm (safety)</li>
+				</ol>
+				After the handover configuration is executed:
+				<ol>
+					<li>Measure the distance between the initial and the delivery location of the container (if not failed)</li>
+					<li>Weight the (filled) container after the execution of the task</li>
+					<li>Report the measures in the .csv file to submit for evaluation (including handover timing)</li>
+				</ol>
+				During the handover execution:
+				<ul>
+					<li>Controls the start and end of the robotic control and perceptions</li>
+					<li>Ready to stop the robot in case of an anomalous behaviour</li>
+				</ul>
+				<i>For the volunteer</i><br>
+				During the handover execution:
+				<ol>			
 					<li>The volunteer grasps the container from its location with a natural grasp</li>
 					<li>The volunteer carries the container with the intention of handing it over to the robot</li>
 					<li>The robot should track and predict the pose of the container to move the arm towards the handover area</li>
 					<li>The volunteer hands the container over to the robot</li>
 					<li>The robot closes the end effector and grasps the container</li>
-					<li>The robot delivers the container upright within the predefined area.</li>
-					<li>Measure the distance between the initial (e.g. centre of the table) and the delivery location of the container (if not failed)</li>
-					<li>Weight the (filled) container after the execution of the task</li>
+					<li>The robot delivers the container upright within the predefined area.</li>					
 					<!-- Annotate elapsed time for the different phases: human manoeuvring, handover, robot manoeuvring (e.g. through visual inspection on recorded videos or automatic algorithm) -->
 				</ol>
 				<p>
-					Note that the volunteer should avoid assisting the robot (i.e., remaining still at a location until the robot can pick up the container) or assuming an adversarial behaviour (i.e., making it harder for the robot to reach the object). 					
+					Note that the volunteer should avoid assisting the robot (i.e., remaining still at a location until the robot can pick up the container) or assuming an adversarial behaviour (i.e., making it harder for the robot to reach the object).<br>
+					The handover is supposed to be dynamic: robot starts moving and approaching as soon as the volunteer grasps the container.		
 				</p>
 				<p>
 					This procedure has been revised from the <a href="https://corsmal.eecs.qmul.ac.uk/benchmark/resources/RAL-SI-2020-P19-0835-V1.0.pdf" target="_BLANK"><u>CORSMAL Human-to-Robot Handover Protocol document</u></a>.	
