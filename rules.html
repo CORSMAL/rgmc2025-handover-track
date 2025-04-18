@@ -84,15 +84,21 @@
 					<li>A complete robotic system should be used.</li>
 					<li>Teams are expected to bring and mount their own setup, unless they declare they will use the available robotic arms.</li>	
 					<li>The task should be performed autonomously without any human input.</li>
-					<li>Teleoperation is NOT allowed.</li>
-					<li>Multimodality is allowed (RGB / RGB-D cameras / microphones / tactile sensors).</li> 
-					<li>Inference will use any combinations of the sensing modalities.</li>
 					<li>The only prior knowledge available is the (high-level, unspecific) set of categories of the containers: cup, drinking glass, food box.</li>
-					<li>The use of prior 3D object models is not allowed (e.g., the reconstructed shapes of the containers in 3D).</li>
-					<li>Each human subject is instructed to use only one hand and always the same.</li>
+					<li>Each volunteer is instructed to use only one hand and always the same.</li>
 					<li>The target location to deliver the container must be inferred using perception from the initial location (not hard-coded) <strong>TBC</strong>.</li>
-					<li>Learning across executions of configurations is not allowed.</li>
-					<li>Calls to exisiting Large Language Models are allowed.</li>					
+				</ul>
+				<i>Allowed</i>
+				<ul>
+					<li>Calls to exisiting Large Language Models</li>
+					<li>Multimodality (RGB / RGB-D cameras / microphones / tactile sensors)</li> 
+					<li>Inference using any combinations of the sensing modalities</li>
+				</ul>
+				<i>NOT allowed</i>
+				<ul>
+					<li>Prior knowledge of the objects (e.g. prior 3D object models, reconstructed shape of the containers in 3D)</li>
+					<li>Learning across executions of configurations</li>
+					<li>Teleoperation</li>
 				</ul>
 				<br>
 			</div>			
